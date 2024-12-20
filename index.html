@@ -1,65 +1,160 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lisa my love</title>
-    <link rel="stylesheet" href="style.css" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no">
+    <meta name="author" content="Techeonn,niikhiljha@gmail.com Delhi">
+
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+    <link rel="apple-touch-icon-precomposed" href="./public/1.png">
+    <meta name="format-detection" content="telephone=no">
+    <title>Merry Christmas</title>
+    <style type="text/css">
+        body {
+            text-align: center;
+            margin: 0px;
+            padding: 0px;
+            font-size: 25px;
+            color: #FFF;
+            font-family: "微软雅黑";
+            background: #ae10ed;
+        }
+        div {
+            text-align: left;
+        }
+        .tittle {
+            width: 100%;
+            background: #ae10ed;
+            top: 0px;
+            height: 100%;
+            z-index: 0;
+            position: absolute;
+            position: fixed !important;
+            display: none;
+            cursor: default;
+        }
+
+        .big {
+            font-family: "微软雅黑";
+            color: #FFF;
+            font-size: 35px;
+        }
+        .tishi {
+            position: absolute;
+            position: fixed !important;
+            z-index: 99;
+            bottom: 10px;
+            width: 100%;
+            text-align: center;
+        }
+        .tishiContent {
+            border: 1px solid #FFF;
+            font-size: 18px;
+            padding: 5px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+    <script type="text/javascript" src="./jscss/jquery.min.js"></script>
+    <script>
+        $(document).ready(function (e) {
+            $(document).scrollTop(300);
+            
+            timer = setInterval("$.change()", 3000);
+            t = 2;
+            $("#t-" + t).fadeIn();
+            $(document).click(
+                    function () {
+                        
+                        clearInterval(timer);
+                        $.change();
+                    }
+            );
+
+           
+            $.change = function () {
+                t++;
+                if (t <= $(".tittle").length) {
+                    $(".tittle").slideUp(1500).fadeOut();
+                    $("#t-" + t).slideDown(1500).fadeIn();
+                } else {
+                    localStorage["index"] = "1";
+                    window.location = "index2.html";
+                }
+            }
+        });
+    </script>
+
 </head>
-   <body>
-    <main>
-        <ul class='slider'>
-          <li class='item' style="background-image: url('https://i.pinimg.com/736x/5b/58/45/5b58459ddd898759cfbbd52956643836.jpg')">
-            <div class='content'>
-              <h2 class='title'>You are Magical</h2>
-              <p class='description'> I was thinking about you today and couldn't help but smile. Your presence has a way of making everything better.  </p>
-              <button>Read More</button>
-            </div>
-          </li>
-          <li class='item' style="background-image: url('https://i.pinimg.com/736x/c0/a7/90/c0a79014d891ecf1d67bb6754770f067.jpg')">
-            <div class='content'>
-              <h2 class='title'>"Your Eyes..."</h2>
-              <p class='description'> "Are you a magician? Because whenever I look at you, everyone else disappears. ✨"</p>
-              <button>Read More</button>
-            </div>
-          </li>
-          <li class='item' style="background-image: url('https://i.pinimg.com/736x/4a/80/c6/4a80c6fba3b8be6dda3eaef06d16041c.jpg')">
-            <div class='content'>
-              <h2 class='title'>"You are Always in my mind"</h2>
-              <p class='description'> "You're like a fine wine – you get better with time. 😍  </p>
-              <button>Read More</button>
-            </div>
-          </li>
-          <li class='item' style="background-image: url('https://i.pinimg.com/736x/d6/28/0e/d6280e284c88e28b3b15dcef55ee5192.jpg')">
-            <div class='content'>
-              <h2 class='title'>"When i Lost I find You.."</h2>
-              <p class='description'>
-                "Do you have a map? Because I just keep getting lost in your eyes every time I see you. 🌟"
-              </p>
-              <button>Read More</button>
-            </div>
-          </li>
-          <li class='item' style="background-image: url('https://i.pinimg.com/736x/5f/e2/05/5fe2052b26d505f930dc341ea7ba212f.jpg')">
-            <div class='content'>
-              <h2 class='title'>"You are cute .."</h2>
-              <p class='description'>
-               "If you were a cat, you'd purr-fectly steal my heart. 
-              </p>
-              <button>Read More</button>
-            </div>
-          </li>
-        
-          
-        </ul>
-        <nav class='nav'>
-          <ion-icon class='btn prev' name="arrow-back-outline"></ion-icon>
-          <ion-icon class='btn next' name="arrow-forward-outline"></ion-icon>
-        </nav>
-      </main>
-      
-      <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-      <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-      <!-- partial -->
-        <script  src="script.js"></script>
+
+<body>
+<section style="text-align: center">
+    <div class="tittle" id="t-1" style="display: none;">
+        <table width="100%" border="0" height="100%">
+            <tbody>
+            <tr>
+                <td align="center"><span class="big">Heyy</span>Love🥰</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="tittle" id="t-2" style="display: block;">
+        <table width="100%" border="0" height="100%">
+            <tbody>
+            <tr>
+                <td align="center"><span class="big">you </span>Know what</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="tittle" id="t-3" style="">
+        <table width="100%" border="0" height="100%">
+            <tbody>
+            <tr>
+                <td align="center">youuuuuu！<span class="big">areeeee·······</span></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+   <div class="tittle" id="t-4" style="">
+        <table width="100%" border="0" height="100%">
+            <tbody>
+            <tr>
+                <td align="center">sooo··<span class="big">special</span></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+    <div class="tittle" id="t-5" style="">
+        <table width="100%" border="0" height="100%">
+            <tbody>
+            <tr>
+                <td align="center"><br>
+                    <span class="big">for me...</span>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="tittle" id="t-6" style="">
+        <table width="100%" border="0" height="100%">
+            <tbody>
+            <tr>
+                <td align="center"><br>and today <span class="big">is something special so click to see something🤫</span></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+</section>
+<div align="center" class="tishi">
+    <span class="tishiContent">click me👀</span>
+</div>
 </body>
 </html>
